@@ -21,8 +21,10 @@ public class AnimalTest {
         Rabbit r = new Rabbit();
         Tiger t = new Tiger();
         System.out.println("兔子的行为");
-        r.eat();r.sleep();
+        r.eat();
+        r.sleep();
         System.out.println("老虎的行为");
-        t.eat();t.sleep();
+        t.eat();
+        t.sleep();
     }
 }
