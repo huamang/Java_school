@@ -1,29 +1,36 @@
 import javax.swing.*;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Work1 {
-    public static void main(String[] argv){
-        final int[] c = {0};
-        JFrame f = new JFrame("test");
-        f.setSize(300,300);
-        f.setLocationRelativeTo(null);
-        f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+public class Work1 extends JFrame implements ActionListener{
 
-        JPanel panel = new JPanel();
-        JButton b = new JButton();
-        b.setText("点击");
+    private JButton b;
+    private int c = 0;
+    public Work1() {
 
-        b.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        setSize(400,120);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
 
-                c[0]++;
-                b.setText("点击"+c[0]+"次");
-            }
-        });
-        panel.add(b);
-        f.setContentPane(panel);
-        f.setVisible(true);
+        b = new JButton("点击");
+        add(b);
+        setVisible(true);
+
+        b.addActionListener(this);
     }
+
+    public void actionPerformed(ActionEvent e) {
+        c++;
+        if(e.getSource() == b) {
+            b.setText("点击"+c+"次");
+        }
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        new Work1();
+    }
+
 }
