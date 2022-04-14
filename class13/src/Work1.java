@@ -19,7 +19,7 @@ public class Work1 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("结束");
+        System.out.println("\n结束");
     }
 }
 

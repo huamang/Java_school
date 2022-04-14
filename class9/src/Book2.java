@@ -4,10 +4,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 /*例4.2*/
 public class Book2 extends JFrame implements ActionListener{
-
+    // 实现这个登录界面，需要两个按钮，一个登录，一个退出
     private JButton b_ok,b_exit;
+    // 登录成功的时候输出的文本框
     private JLabel t_la;
+    // 输入用户名的文本框
     private JTextField userName;
+    // 输入密码的密码框
     private JPasswordField password;
 
     public Book2() {

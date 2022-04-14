@@ -47,7 +47,6 @@ class Buy extends Thread{
             }
         }
     }
-
 }
 
 class Pos{
